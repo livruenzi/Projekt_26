@@ -89,7 +89,7 @@ x is a placeholder for the years and y is the placeholder for the band number
                         clipped = np.clip(array, vmin, vmax)
                         return (clipped-vmin)/(vmax-vmin)
 
-            5.2 extract and normalie the RGB bands for both years
+            5.2 extract and normalize the RGB bands for both years
                 for blue use the index 1 (blue is actually band 2 but because the index starts at 0 it is 1 instead)
                 for green use the index 2 (green = band 3)
                 for red use the index 3 (red = band 4)
