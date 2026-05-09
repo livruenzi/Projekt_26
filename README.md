@@ -260,7 +260,7 @@ helps us to compare and understand different types of changes calculated with th
 
             24.2 calculate z-score
                  divide cosine change minus mean by the standard deviation
-            24.3 define a threshold at the 90th percentile of the z_score and create a boolean mask, name it strong_change_S2
+            24.3 define a threshold at the 95th percentile of the z_score and create a boolean mask, name it strong_change_S2
             
 
     Step 25: visualize the strong change next to the change in NBR
@@ -314,7 +314,7 @@ helps us to compare and understand different types of changes calculated with th
 
             34.2 calculate z-score
                  divide cosine change minus mean by the standard deviation
-            34.3 define a threshold at the 90th percentile of the z_score and create a boolean mask, name it strong_change_AEF
+            34.3 define a threshold at the 95th percentile of the z_score and create a boolean mask, name it strong_change_AEF
 
     Step 35: visualize the strong change
              use the tcc_2022 as background map for the strong change and make it slightly transparent using alpha = 0.8
