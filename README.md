@@ -1,7 +1,7 @@
 # Projekt_ESS341
 Question: How do the results of different methods for calculating the change of burned area, after the Wildfire in Hawaii 2023, differ form each other?
 
-Description: For answering the questions 2 different Methods and 2 different datasets are used. From the Sentinel 2 datasets of the years 2022 (pre-incident) and 2024 (post-incident) the change in the normalized burned ratio (NBR) and the strong change, based on the cosine similarity, are calculated, plotted and compared. Then the Storng change is also calculated and plotted from the Alpha Earth foundations (AEF) embeddings, from 2022 and 2024,  and being compared to the Strong change of the Sentinel 2 datasets.
+Description: For answering the questions 2 different Methods and 2 different datasets are used. From the Sentinel 2 datasets of the years 2022 (pre-incident) and 2024 (post-incident) the change in the normalized burned ratio (NBR) and the strong change, based on the cosine similarity, are calculated, plotted and compared. Then the Storng change is also calculated and plotted from the Alpha Earth (AEF) embeddings, from 2022 and 2024,  and being compared to the Strong change of the Sentinel 2 datasets.
 
 
 ### Data Sources:
