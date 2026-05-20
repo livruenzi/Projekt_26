@@ -7,15 +7,15 @@ Description: For answering the questions 2 different Methods and 2 different dat
 ### Data Sources:
 The dataset for this project is available for download via this link:
     https://drive.google.com/drive/folders/1cnFhMAxAHG-53SUhneyHhJmdYA7DOddb
-The datasets include:
+ The datasets include:
 * Sentinel-2 datasets from the years 2022 and 2024 (10m resolution): S2_composite_2022 & S2_composite_2024
 * AlphaEarth embeddings (AEF) from the years 2022 and 2024 (10m resolution): AEF_embedding_2022 & AEF_embedding_2022
 * The datasets depict the same Area in Hawaii
 
 ## Setup Instructions: 
-Channels:
+ Channels:
             - conda-forge
-dependencies:
+ dependencies:
     Core:
             - python=3.12
             - numpy
@@ -47,8 +47,8 @@ dependencies:
 
 ## Execution Order & Step-by-Step instructions: 
 Every Step (e.g. 1, 2) is in a new cell. Smaller Steps (e.g. 2.1, 2.4) are run in the same cells as their first number indicates (step 2.4 is run in the same cell as step 2 etc.)
-The cells are run in according to their nummerical order
-x is a placeholder for the years and y is the placeholder for the band number
+ The cells are run in according to their nummerical order
+ x is a placeholder for the years and y is the placeholder for the band number
 
     Step 1: Import libraries
                     import os
