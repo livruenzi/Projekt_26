@@ -5,9 +5,21 @@ Description: For answering the questions 2 different Methods and 2 different dat
 
 
 ### Data Sources:
+The dataset for this project is available for download via this link:
     https://drive.google.com/drive/folders/1cnFhMAxAHG-53SUhneyHhJmdYA7DOddb
+The datasets include:
+    - Sentinel-2 datasets from the years 2022 and 2024
+                S2_composite_2022
+                S2_composite_2024
+
+    - AlphaEarth embeddings (AEF) from the years 2022 and 2024
+                AEF_embedding_2022
+                AEF_embedding_2022
 
 ## Setup Instructions: 
+Channels:
+            - conda-forge
+dependencies:
     Core:
             - python=3.12
             - numpy
@@ -56,19 +68,21 @@ x is a placeholder for the years and y is the placeholder for the band number
                     os.path.join(data_folder, "name of dataset")
                 
     Step 3: load bands of the sentinel2 datasets using rasterio
+            & check that the CRS match using assert
                 with rasterio.open(S2_x_fp) as src:
                     img_x = src.read()
+                    img_x_crs = src.crs
+
+                assert img_2022_crs == img_2024_crs, "CRS do not match"
                     
-    Step 4: Check data from sentinel2 datasets
-            4.1 print an f-string for every year, call it "img_x"
-                    print(f"img_x:")
-            4.2 find out if the datasets are indeed NumPy arrays using an f-string and type()
+    Step 4: Check that data from both sentinel2 datasets are the same. Use assert and print
+            4.1 find out if the datasets are indeed NumPy arrays using an f-string and type()
                     print(   -Type: {type(img_x))")
-            4.3 check the data type using .dtype()
+            4.2 check the data type using .dtype()
                     print(f"   - Data Type: {img_x.dtype}")
-            4.4 check the dimension using .ndim
+            4.3 check the dimension using .ndim
                     print(f"   - Dimension: {img_x.ndim}")
-            4.5 check the shape using .shape
+            4.4 check the shape using .shape
                     print(f"   - Shape: {img_x.shape}")
 
 
@@ -277,20 +291,19 @@ helps us to compare and understand different types of changes calculated with th
             26.2 create a filepath called "AEF_x_fp" (replace x with the respective year of the dataset), using os.path.join
                     os.path.join(data_folder, "name of dataset")
 
-    Step 27: load bands of the AEF embedding datasets using rasterio (see step 3)
+    Step 27: load bands of the AEF embedding datasets using rasterio & check that the CRS of the AEF and Sentinel-2 datasets match using assert (see step 3)
 
-    Step 28: Check data from AEF datasets
-            28.1 print an f-string for every year, call it "AEF_x:"
-                    print(f"AEF_x:")
-            28.2 find out if the datasets are indeed NumPy arrays using an f-string and type()
+    Step 28: Check that data from both AEF datasets are the same. Use assert and print
+            28.1 find out if the datasets are indeed NumPy arrays using an f-string and type()
                     print(   -Type: {type(AEF_x))")
-            28.3 check the data type using .dtype()
+            28.2 check the data type using .dtype()
                     print(f"   - Data Type: {AEF_x.dtype}")
-            28.4 check the dimension using .ndim
+            28.3 check the dimension using .ndim
                     print(f"   - Dimension: {AEF_x.ndim}")
-            28.5 check the shape using .shape
+            28.4 check the shape using .shape
                     print(f"   - Shape: {AEF_x.shape}")
-            28.6 check for NaN values np.isnan(AEF_x).sum()
+            28.5 check for NaN values np.isnan(AEF_x).sum()
+                 here there is no need to check if the NaN values match so we're just gonna use print
                     print(f"   - NaN values:{np.isnan(AEF_x).sum()}")
 
 #### Strong change for AEF embeddings datasets
