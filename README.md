@@ -8,11 +8,11 @@ Description: For answering the questions 2 different Methods and 2 different dat
 The dataset for this project is available for download via this link:
     https://drive.google.com/drive/folders/1cnFhMAxAHG-53SUhneyHhJmdYA7DOddb
 The datasets include:
-    - Sentinel-2 datasets from the years 2022 and 2024
+* Sentinel-2 datasets from the years 2022 and 2024
                 S2_composite_2022
                 S2_composite_2024
 
-    - AlphaEarth embeddings (AEF) from the years 2022 and 2024
+* AlphaEarth embeddings (AEF) from the years 2022 and 2024
                 AEF_embedding_2022
                 AEF_embedding_2022
 
