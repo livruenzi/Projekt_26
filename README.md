@@ -5,31 +5,32 @@ Description: For answering the questions 2 different Methods and 2 different dat
 
 
 ### Data Sources:
-The dataset for this project is available for download via this link:
-    https://drive.google.com/drive/folders/1cnFhMAxAHG-53SUhneyHhJmdYA7DOddb
- The datasets include:
+The dataset for this project is available for download via this link: https://drive.google.com/drive/folders/1cnFhMAxAHG-53SUhneyHhJmdYA7DOddb
+        
+The datasets include:
 * Sentinel-2 datasets from the years 2022 and 2024 (10m resolution): S2_composite_2022 & S2_composite_2024
 * AlphaEarth embeddings (AEF) from the years 2022 and 2024 (10m resolution): AEF_embedding_2022 & AEF_embedding_2022
 * The datasets depict the same Area in Hawaii
 
 ## Setup Instructions: 
- Channels:
+    Channels:
             - conda-forge
- dependencies:
-    Core:
+
+    dependencies:
+        Core:
             - python=3.12
             - numpy
             - matplotlib
     
-    Notebook envrionment:
+        Notebook envrionment:
             - jupyterlab
             - ipykernel
             - jupyterlab_widgets
 
-    Geospatial stack:
+        Geospatial stack:
             - rasterio
 
-    other libraries:
+        other libraries:
             - os
             - matplotlib.pyplot
             - ListedColormap from matplotlib
